@@ -3,6 +3,8 @@ name: Record Commit History
 on:
   schedule:
     - cron: '*/1 * * * *' # Runs every 1 minutes
+  workflow_dispatch: # Allows manual triggering
+
 
 jobs:
   record_commits:
