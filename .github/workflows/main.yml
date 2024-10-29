@@ -1,0 +1,26 @@
+name: Record Commit History
+
+on:
+  schedule:
+    - cron: '*/1 * * * *' # Runs every 1 minutes
+
+jobs:
+  record_commits:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Record Commit History
+      run: |
+        mkdir -p logs
+        git log --pretty=format:"%h - %an, %ar : %s" > logs/commit_history_$(date +'%Y-%m-%d').txt
+
+    - name: Push Commit Log
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git add logs/commit_history_*.txt
+        git commit -m "Update commit history log for $(date +'%Y-%m-%d')"
+        git push
