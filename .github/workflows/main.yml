@@ -2,7 +2,7 @@ name: Record Commit History
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Runs every 5 minutes
+    - cron: '59 23 * * 0' # Runs at 23:59 every Sunday
   workflow_dispatch: # Allows manual triggering
 
 
