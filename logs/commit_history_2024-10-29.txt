@@ -1,1 +1,13 @@
-59f740a - 박지환 / AlexPark / 朴志桓, 7 minutes ago : cron for every 5 mins
+8274573 - 박지환 / AlexPark / 朴志桓, 28 seconds ago : fetch-depth: 0
+511cc76 - 박지환 / AlexPark / 朴志桓, 4 minutes ago : 일요일 23:59에 git log 확인하기
+455a874 - github-actions[bot], 7 minutes ago : Update commit history log for 2024-10-29
+59f740a - 박지환 / AlexPark / 朴志桓, 14 minutes ago : cron for every 5 mins
+7667e72 - github-actions[bot], 17 minutes ago : Update commit history log for 2024-10-29
+e8f55eb - 박지환 / AlexPark / 朴志桓, 17 minutes ago : Update main.yml
+e7c5e6d - 박지환 / AlexPark / 朴志桓, 20 minutes ago : git log cron
+7d03682 - aptheparker, 9 hours ago : 기본 템플릿 추가
+bfdb33b - aptheparker, 9 hours ago : 참여인원
+5e13da9 - aptheparker, 10 hours ago : 스터디에 필요한 readme 작성
+768fdbf - 박지환 / AlexPark / 朴志桓, 11 hours ago : 발표 순서 최종
+2cb2a5c - 박지환 / AlexPark / 朴志桓, 13 hours ago : Update README.md
+ba5474e - 박지환 / AlexPark / 朴志桓, 13 hours ago : Initial commit
