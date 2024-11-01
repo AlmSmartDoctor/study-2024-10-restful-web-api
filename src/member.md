@@ -2,7 +2,7 @@
 
 스터디를 위해 기여해주신 모든 분들께 감사드립니다. 아래는 스터디 참여자와 각자의 역할입니다.
 
-## 팀 구성 (총 11명)
+## 팀 구성 (총 12명)
 
 | 이름   | 역할        | GitHub                                    |
 | ------ | ----------- | ----------------------------------------- |
@@ -17,6 +17,7 @@
 | 공병규 | 스터디 멤버 | [GitHub](https://github.com/username)     |
 | 서지훈 | 스터디 멤버 | [GitHub](https://github.com/username)     |
 | 최준영 | 스터디 멤버 | [GitHub](https://github.com/username)     |
+| 임해찬 | 스터디 멤버 | [GitHub](https://github.com/username)     |
 
 ---
 
