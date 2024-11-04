@@ -5,26 +5,25 @@
 
 > "REST is a hybrid style derived from several of the network-based architectural styles described in Chapter 3 and combined with additional constraints that define a uniform connector interface." [Fielding, R. T. (2000)](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
 
-\- **REST란?** 여러 아키텍쳐 스타일에서 파생된 혼합 스타일로, 추가적인 제약을 결합한 것.
-
-\- Representational State Transfer - 자원을 표현으로 구분하여 해당 자원의 상태를 주고 받는 것.
+\- **REST(Representational State Transfer)란?** 여러 아키텍쳐 스타일에서 파생된 혼합 스타일로, 추가적인 제약을 결합한 것.
+(HTTP의 설계 원칙을 기반으로 발전한 아키텍쳐 스타일)
 
 ### 1-1. RESTful API 
 
 \- **RESTful API란?** REST라는 표준을 따르는 API(Application Programing Interface)
 
 - API란 정의 및 프로토콜 집합을 사용해 두 소프트웨어 구성 요소가 서로 통신할 수 있게 하는 메커니즘 (중간 전달자) [aws](https://aws.amazon.com/ko/what-is/api/)
-- RESTful 이전의 API의 문제 **한 번 배포되면 바꾸기 어렵다**
+- RESTful 이전의 API의 문제 : **한 번 배포되면 바꾸기 어렵다**
 
 ---
 
 ### 1-2. 리소스와 표현
 
-\- **resource & representation** 리소스는 URL이 붙은 것(3p) - 일반적으로 리소스는 특정 자원으로 주로 데이터 객체를 의미하는데, 결국 REST 아키텍쳐에서 리소스는 웹에서 고유하게 식별되고 접근될 수 있어야 하기 때문에 그렇게 표현한 것 같습니다.
-그리고 표현(representation)은 리소스에(URL) HTTP 요청을 보내면 응답으로 보내는 것을 뜻합니다. 책에서는 HTML 문서를 예로 들고 있지만, 다양한 형태의 하이퍼미디어가 전부 포함될 수 있죠.
+\- **resource & representation** 리소스는 URL이 붙은 것(3p) 
 
-api란 우리가 리소스와 표현을 주고 받는 통신 메커니즘이고, REST는 리소스의 형태, 표현의 형태, 통신 방식의 디자인.
+- 일반적으로 리소스는 특정 자원으로 주로 데이터 객체를 의미하는데, 결국 REST 아키텍쳐에서 리소스는 웹에서 고유하게 식별되고 접근될 수 있어야 하기 때문에 그렇게 표현한 것 같습니다.
 
+- 그리고 표현(representation)은 리소스에(URL) HTTP 요청을 보내면 응답으로 보내는 것을 뜻합니다. 책에서는 HTML 문서를 예로 들고 있지만, 다양한 형태의 하이퍼미디어가 전부 포함될 수 있습니다.
 
 
 ### 1-3. 의미 체계의 문제
@@ -73,16 +72,19 @@ REST에서는 클라이언트가 애플리케이션 상태를 기억하게 했�
 
 ### 질문 5. SOAP 표준과 REST 표준
 
-### 질문 6. 웹
+\-**SOAP (Simple Object Access Protocol)** : XML 형식으로 데이터를 전송하기 위한 프로토콜 
 
-질문 목록 - 
+\-**SOAP vs REST** : 
+  1. 프로토콜 / 아키텍쳐 스타일 - SOAP는 프로토콜로 세부적이고 엄격한 규칙 / REST는 아키텍쳐 스타일로 시스템 전반의 구조와 설계
+  2. 상태관리 : SOAP는 전통적인 세션(상태 정보를 서버에서 관리)/ REST는 stateless
+  3. 성능 및 복잡성 : SOAP는 더 복잡, XML을 사용해 처리비용이 큼 / REST는 단순,
+
+\-**REST 탄생의 결정적인 이유** : REST는 웹의 기본 원칙과 HTTP 프로토콜을 기반으로 설계 - 웹 발전에 따라. 
+무상태성을 통해 서버의 부담을 줄이고, 요청 처리의 확장성을 높임. 단순, 효율적.
+
+### 질문 6. 웹의 구성
+
+\-**웹의 구성** : URL 명명 규칙, HTTP 프로토콜, HTML 문서 형식의 세 가지 기술 - 책
+- 다른 분들의 생각은 어떤가요? (클라이언트-서버, 프론트엔드-백엔드 ?)
 
 
-
-이 책에서는 웹이 URL 명명 규칙, HTTP 프로토콜, HTML 문서 형식의 세 가지 기술로 이루어져 있다고 본다고 하는데,
-그럼 다른 곳에서는 다르게 분류하는 곳도 있는건가요? 있다면 어떻게 분류할 수 있을까요? - 목요일 조
-
-책에서 http와 다른 프로토콜들의 '세션' 유지기간에 대해서 비교하여 설명하고 있는데, 여기서 세션이란 어떻게 정의되는 것일까요?
-
-SOAP 표준과 REST 표준의 핵심적인 차이점은 무엇인가요?
-또한, REST 표준이 탄생하게 된 결정적인 이유는 무엇인가요?
