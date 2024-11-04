@@ -15,12 +15,15 @@
 
 ### 1-4. Application State & Resource State
   - 애플리케이션 상태란 : 전체 시스템이나 클라이언트의 현재 상태.
+Application state is information about where you are in the interaction. It is used during your session with an application. For example, the fact that you are viewing picture 23, or the fact that you are logged in on Twitter, are both application state. Changes to this state are possible by the controls in hypermedia representations. In the pictures case, they are links, and on Twitter, they are the tweet box and button.
   - 예시 : 사용자가 로그인했는지, 현재 페이지에서 어떤 데이터를 표시하는 지 등
 
   - 리소스 상태란 : 특정 자원의 현재 상태. 일반적으로 API에서 다루는 데이터 객체(데이터와 해당 데이터의 메타데이터)
+Resource state is the kind of (semi-)permanent data a server stores, and lasts beyond the duration of a single session of interactions. An image that has been uploaded to the gallery and a tweet you have sent are examples of resource state. So, as you can see, although HTTP is a stateless protocol, you can still have long-term state on the server. However, the short-term state that is used during your interaction with the server is solely your client’s responsibility, and it has to send it within every request. This makes the web stateless and therefore scalable.
   - 예시 : 홈페이지 HTML 문서, 이미지, 비디오 등의 파일, JSON 데이터 등.
 
-  - 애플리케이션 상태와 리소스 상태의 
+  - 애플리케이션 상태와 리소스 상태의 혼재 : 일반적으로 애플리케이션 상태는 클라이언트 측에서 관리하고, 리소스 상태는 서버에서 관리하지만, 서버가 애플리케이션 상태를 나타내거나 클라이언트가 HTML 폼 등을 보내서 리소스를 조작하기도 한다.
+
 질문 목록 - 
 어플리케이션과 리소스 상태가 정확히 어떤 것을 나타내는 것이고,
 그리고 둘이 뒤섞여 있는 경우는 어떤 경우를 의미할까요?
