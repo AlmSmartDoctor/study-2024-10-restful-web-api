@@ -14,7 +14,7 @@
 | 서형석 | 스터디 멤버 | [GitHub](https://github.com/hyeongseok21) |
 | 이창준 | 스터디 멤버 | [GitHub](https://github.com/username)     |
 | 정시우 | 스터디 멤버 | [GitHub](https://github.com/username)     |
-| 공병규 | 스터디 멤버 | [GitHub](https://github.com/username)     |
+| 공병규 | 스터디 멤버 | [GitHub](https://github.com/johnpooh121)  |
 | 서지훈 | 스터디 멤버 | [GitHub](https://github.com/username)     |
 | 최준영 | 스터디 멤버 | [GitHub](https://github.com/username)     |
 | 임해찬 | 스터디 멤버 | [GitHub](https://github.com/username)     |
