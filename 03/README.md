@@ -69,7 +69,19 @@
 
 > 주로 웹 환경에서 쓰이는 http 메소드는 GET,POST,PUT,DELETE,PATCH인 것 같은데, 그 외의 OPTIONS 메소드는 언제 쓰일까요?
 
----
+- OPTIONS 메소드는 '해당 리소스가 지원하느 HTTP 메소드'를 나열해주는 역할을 합니다.
+
+- CORS(Cross-Origin Resource Sharing)에서 사용. 클라이언트가 서버에게 실제 요청을 보내기 전에, 서버가 클라이언트에게 허용된 메소드를 알려주기 위해 사용.
+
+- 허용되지 않는 요청의 경우, 405(Method Not Allowed) 에러를 발생시키고 실제 요청은 전송하지 않게된다.
+
+- OPTIONS 발생 조건 (아래 조건 중 하나라도 만족하면 OPTIONS 요청을 보낸다):
+
+  1. GET, HEAD, POST 요청이 아닌 경우
+  2. Custom HTTP Header가 존재하는 경우
+  3. Content-Type이 application/x-www-form-urlencoded, multipart/form-data, text/plain이 아닌 경우
+
+- ***
 
 ### (정시우) 질문 2
 
