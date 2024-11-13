@@ -54,8 +54,8 @@ img 태그는 자동으로 HTTP 요청을 통해 이미지를 불러오는데
 어떻게 이런 기능들이 작동되고, 또 어떤 순서로 동작이 이루어지는 궁금합니다
 
 - script 태그 -> blocking. 코드를 모두 실행할 떄까지 파싱 중단.
-- link 태그 (rel="stylesheet") -> 비동기. 하지만 필요에 따라 렌더링 지연.
-- img 태그 -> 비동기. 비차단. ([출처](https://velog.io/@chltjdrhd777/CSS-의-fetching은-Asynchronous하지만-Blocking스럽다))
+- link 태그 (rel="stylesheet") -> 비동기. 하지만 필요에 따라 렌더링 지연. ([출처](https://velog.io/@chltjdrhd777/CSS-의-fetching은-Asynchronous하지만-Blocking스럽다))
+- img 태그 -> 비동기. 비차단.
 
 ## (서형석) 질문 4
 > 하이퍼미디어 컨트롤이 어떻게 의미적 차이를 이어줄 수 있는지 설명해주세요
