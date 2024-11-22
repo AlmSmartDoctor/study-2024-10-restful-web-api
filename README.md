@@ -6,5 +6,5 @@
 
 - [스터디 규칙](./src/rule.md)
 - [발표 순서](./src/presentation.md)
-- [패널티](./src/penalty.md)
+- [페널티](./src/penalty.md)
 - [참여인원](./src/member.md)
