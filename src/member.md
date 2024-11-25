@@ -18,7 +18,7 @@
 | 서지훈 | 스터디 멤버 | [GitHub](https://github.com/username)     |
 | 최준영 | 스터디 멤버 | [GitHub](https://github.com/username)     |
 | 임해찬 | 스터디 멤버 | [GitHub](https://github.com/username)     |
-| 안재우 | 스터디 멤버 | [GitHub](https://github.com/username)     |
+| 안재우 | 스터디 멤버 | [GitHub](https://github.com/s20200366)     |
 
 ---
 
