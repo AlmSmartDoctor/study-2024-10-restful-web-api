@@ -18,8 +18,10 @@
 ### A1.
 | 특징 | Microdata | RDFa | JSON-LD |
 |--------|--------|--------|--------|
-| 표현 방식 | html 속성에 직접 삽입 | html/xml 속성으로 RDF 관계 표현 | JSON 포맥으로 별도 <script>에 삽입 |
+| 표현 방식 | html 속성에 직접 삽입 | html/xml 속성으로 RDF 관계 표현 | JSON 포맷으로 별도 <script>에 삽입 |
+| 사용 용도/장점 | 간단한 구조화된 표현 |  유연성, 메타데이터와 통합이 용이 | html 과 분리되어 관리 용이 |
 
+https://www.next-t.co.kr/seo/seo-wiki/%EA%B5%AC%EC%A1%B0%ED%99%94%EB%90%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0/ - 참고문서
 
 ### Q2.
 > 박근영
