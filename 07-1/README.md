@@ -16,13 +16,32 @@
 > 이 세 형식을 비교해 주세요
 
 ### A1.
+| 특징 | Microdata | RDFa | JSON-LD |
+|--------|--------|--------|--------|
+| 표현 방식 | html 속성에 직접 삽입 | html/xml 속성으로 RDF 관계 표현 | JSON 포맥으로 별도 <script>에 삽입 |
+
 
 ### Q2.
 > 박근영
 > 마이크로데이터 속성 중 itemid와 itemref에 대해서도 알려주세요
 
 ### A2.
+- itemid : 고유 식별자로, html의 id와 유사한 역할을 합니다. 하지만, 책에서 id 보다는 class 사용을 권했듯, 마찬가지로 itemprop 
+사용을 권장합니다. (131p)
+- itemref : itemtype 문서에 정의된 itemprop들을 하나의 항목으로 묶어서 연결하고 싶을 때 사용하는 속성입니다.
+예를 들면, 아래 경우는 itemref가 id가 address인 태그를 참조해, 정의된 PostalAddress가 Person에 속한 정보임을 알려줍니다.
+```
+<div itemscope itemtype="http://schema.org/Person" itemid="https://example.com/person/johndoe" itemref="address">
+  <span itemprop="name">John Doe</span>
+  <span itemprop="telephone">+1234567890</span>
+</div>
 
+<div id="address" itemscope itemtype="http://schema.org/PostalAddress">
+  <span itemprop="streetAddress">123 Main St</span>
+  <span itemprop="addressLocality">Anytown</span>
+</div>
+```
+https://html.spec.whatwg.org/multipage/microdata.html#attr-itemref - itemref
 
 ### Q3.
 > 임해찬
@@ -30,18 +49,36 @@
 > itemprop 속성과 itemtype 속성을 통해 리소스의 관계를 표현하는 예시를 보고 싶습니다.
 
 ### A3.
+먼저 rel과 마이크로데이터의 차이를 알면 더 이해하기 쉬운데, rel의 경우에는 현재 문서와 다른 문서의 관계를 정의하는 것으로 1:1의 관계입니다. 하지만, 마이크로데이터는 구조화된 데이터에 가깝습니다. 저는 마이크로데이터를 HTML을 JSON 처럼 만들어주는 것으로 해석했습니다.
+결과적으로, itemtype은 데이터의 유형을 정의하는 문서이고, itemprop은 해당 문서의 특정 데이터 항목을 지정하는 용도입니다.
+우리가 특정 JSON 데이터를 가져와서, 특정 속성의 값을 받아와 사용하는 것과 비슷하게 보면 될 것 같습니다.
+```
+rel 예시
+<a href="next-article.html" rel="next">Next Article</a>
+<a href="previous-article.html" rel="prev">Previous Article</a>
+```
+```
+마이크로데이터 예시
+<div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">John Doe</span>
+  <span itemprop="telephone">+1234567890</span>
+</div>
+```
 
 ### Q4.
 > 최준영
 > 리뷰, 이벤트, 사용자 프로필 등의 구조화된 데이터의 여러가지 타입들에 대해 소개해주세요
 
 ### A4.
+hCard 와 같은 표준을 말씀하시는 것 같습니다. hCard 와 같은 마이크로포맷에는 h-adr(adr의 upadate ver.) : 주소, h-recipe(hRecipe의 update ver.): 레시피, h-resume(hResume의 update ver.): 이력서 등이 있습니다.
+https://microformats.org/wiki/microformats2#Parsers - microformats2
+
 
 ### Q5.
 > 곽재영
 > HTML 4의 rev 속성을 rel 속성과 비교하여 설명해주시고, 현재는 왜 사용하지 않는 지 자세한 이유를 알고 싶어요.
 
-### A6.
+### A5.
 130p 주석에 rev 속성은 rel의 반대에 해당한다고 합니다. rel은 next, rev는 previous의 관계를 나타내는 역할을 한다고 합니다.
 html5에서 제외된 이유는 rev가 rel에 비해 많이 사용되지 않았고, 관계는 한 방향으로 나타내는 편이 직관적이고 명확했기 때문이라고 합니다.
 https://www.w3.org/TR/html4/struct/links.html#h-12.3.1 - what is rel & rev
