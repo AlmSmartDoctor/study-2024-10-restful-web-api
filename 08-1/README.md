@@ -80,7 +80,18 @@
 
 > 프로파일 작성 시 유용한 도구 몇 가지를 장단점과 함께 소개해주세요
 
-- Swagger? VsCode?
+- 프로파일 작성은 보통 위키 형식 또는 스프레드시트 형식으로 많이 사용됨
+- API 문서화 툴: OpenAPI Generator, Swagger 등
+  - [OpenAPI Generator](https://openapi-generator.tech/):
+    - 무료
+    - 표준화 잘 되어있음 -> OpenAPI로 만들어진 문서를 통해 다른 도구들도 이용 가능
+    - HTML이나 [cwiki](https://infra.apache.org/cwiki.html) 문서로 변환 가능
+  - [Swagger](https://swagger.io/):
+    - 사용자 한명까지만 무료
+    - 다양한 기능 포함
+    - Swagger UI: 각 API가 어떤 작업을 하는지 한눈에 파악 쉬움
+      - 화려함
+    - Swagger Editor: 오픈소스 API 에디터
 
 ## Q2
 
@@ -114,3 +125,17 @@
 
 > XMDP를 기술하는 html과 xhtml의 차이를 설명해주세요 <br>
 > html에서는 가능하지만 xhtml에서는 불가능한 혹은 그 반대의 경우를 설명해주세요
+
+- HTML과 XHTML 모두 마크업 언어로 XHTML이 HTML에 비해 더 규칙이 엄격하고 표준화 되어있음
+  - HTML: `<br>, <img>`
+  - XHTML: `<br />, <img />`
+- 자바스크립트를 사용해 DOM을 조작할때 차이 존재
+  - `document.body.tagName`
+    - HTML: `BODY`
+    - XHTML: `body`
+- 문서를 읽다가 오류가 발생했을 경우(문법 오류 등)
+  - HTML: 자체적으로 오류를 수정해서 보여주거나 해당 부분만 망가지고 나머지 부분들은 제대로 렌더링 됨
+  - XHTML: 오류 메시지를 띄우고 페이지 렌더링 중단
+- [XHTML은 MathML이나 SVG같은 다른 XML 형식들을 문서에 포함시킬 수 있음](https://www.w3.org/TR/XHTMLplusMathMLplusSVG/)
+
+  <img src="./images/mixed-sample.png" width="300" />
