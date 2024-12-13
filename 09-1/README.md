@@ -36,11 +36,15 @@
   -> 위 과정을 만족할 때까지 반복.
 - 상태 다이어그램은 출발점이 없는 하나의 화살표를 포함해야한다 (홈페이지)
 
-그림[9-1](./images/9-1.png)
-그림[9-2](./images/9-2.png)
-그림[9-3](./images/9-3.png)
-그림[9-4](./images/9-4.png)
-그림[9-5](./images/9-5.png)
+<img src="./images/9-1.png" width="300" />
+
+<img src="./images/9-2.png" width="300" />
+
+<img src="./images/9-3.png" width="300" />
+
+<img src="./images/9-4.png" width="300" />
+
+<img src="./images/9-5.png" width="300" />
 
 3. 이름 조정하기
 
@@ -58,19 +62,19 @@
       - 리소스 상태 버전 관리 > [RFC5829](https://datatracker.ietf.org/doc/html/rfc5829)
       - 리소스 상태만을 변경 -> edit
 
-그림[9-6](./images/9-6.png)
+<img src="./images/9-6.png" width="300" />
 
 4. 미디어 유형 선택하기
 
 - 컬렉션 패턴 유형 선택
 
-그림[9-7](./images/9-7.png)
+<img src="./images/9-7.png" width="300" />
 
 Collection+JSON, AtomPub, 또는 OData 사용을 고려
 
 - 하이퍼미디어 유형 선택
 
-그림[9-8](./images/9-8.png)
+<img src="./images/9-8.png" width="300" />
 
 - HTML, HAL, 사이렌 선택
 
@@ -124,11 +128,11 @@ Collection+JSON, AtomPub, 또는 OData 사용을 고려
 
 - 의미 체계 서술자 나열하기
 
-그림[9-9](./images/9-9.png)
+<img src="./images/9-9.png" width="300" />
 
 - 상태 다이어그렘 그리기
 
-그림[9-10](./images/9-10.png)
+<img src="./images/9-10.png" width="300" />
 
 - 이름 다시 조정하기
 
@@ -137,7 +141,7 @@ Collection+JSON, AtomPub, 또는 OData 사용을 고려
   - create -> 엑티비티 스트림즈 표준 참조 - post
   - 메시지 ID -> 제거
 
-그림[9-11](./images/9-11.png)
+<img src="./images/9-11.png" width="300" />
 
 - 미디어 유형 선택하기
 
