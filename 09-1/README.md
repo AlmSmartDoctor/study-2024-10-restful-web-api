@@ -195,8 +195,60 @@ Collection+JSON, AtomPub, 또는 OData 사용을 고려
 
 ### Q2.
 
+> 공병규
+> 202p에서 "JSON-LD 는 불안전한 상태전이를 표현할 수 없다" 라는 말이 나오는데 무슨 뜻인지 설명해주실 수 있나요?
+
+JSON-LD 는 상태전이를 표현하는데 적합하지 않은 데이터 포멧이다. 리소스 간의 "관계"를 표현하기 위한 프로파일이기 때문. 변경이 불가능하게끔 설계 되어있는게 JSON-LD 의 목적이자 특성.
+[JSON-LD](https://en.wikipedia.org/wiki/JSON-LD#:~:text=JSON%2DLD%20(JavaScript%20Object%20Notation,is%20similar%20to%20traditional%20JSON.)
+
 ### Q3.
+
+> 박지환
+> (p. 202, line 6) '미디어 유형이 정의한 이 세 가지 이외의 다른 불안전한 전이"는 어떤 경우를 말하는 것일까요?
+> CUD를 제외한 다른 불안전(unsafe)한 전이 방식이 있는 것일까요?
+
+책에 나온 세 가지 이외의 다른 불안전한 전이는 Collection+JSON 미디어 유형의 세가지 상태 전이 방법: "항목"을 추가하고, 편집하고, 삭제하는 것을 뜻한다.
+이는 CUD를 제외한 다른 불안전한 전이를 사용하지 못한다는 한계를 표혔했다기 보다, 항목이라는 Collection+JSON 미디어 유형에 정의된 리소스만 상태 전이할 수 있음의 한계를 표현했다고 해석.
+
+CRUD 관점에서 보면 CUD 이외 R 은 불안전한 상태 전이라 볼 수 없다. 고로 CUD를 제외한 불안전한 전이 방식은 없다.
+HTTP 메서드 관점에서 보면 다양하게 있다. CUD 에 해당하는 HTTP 메서드 들 중 PATCH, CONNECT, POST 등등이 불안전한 전이 방식이다 [해당 영상에서 잘 정리해줬다](https://www.theserverside.com/tip/Idempotent-HTTP-methods-and-REST)
 
 ### Q4.
 
+> 정시우
+> 204p 에서 언급된 replies 연결 관계가 어떤 기능이 있는지, 어떻게 사용하는 지 예시를 들어주세요.
+
+[RFC4685](https://www.ietf.org/rfc/rfc4685.txt) - 메시지 스레딩을 지원하기 위한 확장에 대한 설명
+replies 연결 관계로 게시글과 댓글의 관계를 표현할 수 있다.
+
+```xml
+   <feed xmlns="http://www.w3.org/2005/Atom"
+         xmlns:thr="http://purl.org/syndication/thread/1.0">
+     <id>http://www.example.org/myfeed</id>
+     <title>My Example Feed</title>
+     <updated>2005-07-28T12:00:00Z</updated>
+     <link href="http://www.example.org/myfeed" />
+     <author><name>James</name></author>
+     <entry>
+       <id>tag:entries.com,2005:1</id>
+       <title>My original entry</title>
+       <updated>2006-03-01T12:12:12Z</updated>
+       <link href="http://www.example.org/entries/1" />
+       <link rel="replies"
+             type="application/atom+xml"
+             href="http://www.example.org/mycommentsfeed.xml"
+             thr:count="10" thr:updated="2005-07-28T12:10:00Z" />
+       <summary>This is my original entry</summary>
+     </entry>
+   </feed>
+```
+
 ### Q5.
+
+> 안재우
+> 상태 다이어그램 말고도 api의 구조를 나타낼 수 있는 다른 다이어그램이나 표현 방식이 존재하나요?
+> 존재한다면 상태 다이어그램과 장단점 비교와 어떤게 더 많이 쓰이는지가 궁금합니다
+
+[Entity Relationship Diagram, Sequence Diagram, Use Case Diagram 등등](<https://drawio-app.com/blog/uml-diagrams/#:~:text=The%20top%20three%20UML%20diagrams,programmer)%2C%20and%20sequence%20diagrams.>)
+[일반적으로는 Class Diagram, Sequence Diagram, Use Case Diagram 을 가장 많이 사용한다고 한다](https://www.geeksforgeeks.org/which-uml-diagrams-are-mostly-used/)
+하지만 저자는 상태 다이어그램을 강조한다. 그 이유는 저자가 상태 전이와 의미 체계 서술자를 해결하면 리소스는 해결되기 때문이라고 한다 p. 213
