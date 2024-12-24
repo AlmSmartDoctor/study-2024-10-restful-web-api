@@ -28,9 +28,9 @@
 - html, HAL, Siren, WADL 등등..
 
 ### OData
-- content-type : application/jsopn;odata=fullmetadata
-- http://www.odata.org/docs
-- json, xml 모두 사용
+- content-type : application/json;odata=fullmetadata
+- https://www.odata.org/getting-started/basic-tutorial/
+- json, xml 형태로 사용 가능능
 
 ![](images/README_2024-12-24_00-48-44.png)
 
@@ -111,6 +111,8 @@
 https://www.odata.org/documentation/odata-version-3-0/common-schema-definition-language-csdl/
 
 https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/entity-data-model-primitive-data-types
+
+https://www.odata.org/documentation/odata-version-2-0/overview/#AbstractTypeSystem
 
 ### Q2.
 
