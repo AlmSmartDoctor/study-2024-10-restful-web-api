@@ -12,6 +12,7 @@
 
 ## 개요
 
+![image](https://github.com/user-attachments/assets/e48ccccc-423b-4dcb-b9f7-aa8856277af9)
 
 
 - 월드 와이드 웹을 기술 스택으로 생각
