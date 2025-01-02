@@ -59,10 +59,14 @@ Authorization: Basic YWxpY2U6cGFzc3dvcmQ=
 
 ### OAuth1.0
 
+![image](https://github.com/user-attachments/assets/a3a3212d-ceb9-44b6-b2cc-835fcb8dd05d)
+
 단계
 1. 도메인 서버는 비밀스럽게 API 제공자인 api.example.net으로 임의의 증명을 요청
 2. 도메인 서버는 HTTP 리다이렉트를 앨리스의 브라우저로 보냄. 앨리스는 사용중인 웹 사이트를 떠나고 API 제공자가 보내준 웹 페이지 Example.net으로 이동
 - 앨리스가 Example.net에 로그인 되어 있지 않다면, 로그인하거나 계정을 생성해야함. 비밀번호를 입력해야 하나, Example.net의 비밀번호를 api.example.net에 주는 것이지, 도메인 서버에 주는 것은 아님
+
+![image](https://github.com/user-attachments/assets/bf9a17b8-e145-4581-acfc-db12bf33ea0a)
 3. 로그인 후, 앨리스는 1단계에서 취득한 임시 증명과 연결된 웹 페이지를 봄. 페이지는 무엇이 진행되는지 앨리스에게 설명하고, 그녀가 api.example.net의 토큰 증명 집합을 도메인 서버에 허용하길 원하는지 물음
 4. 앨리스가 결정을 하고 브라우저는 원래 사용중이던 페이지로 리다이렉트됨
 5. 4단계에서 No라고 결정하면 클라이언트는 api.example.net의 토큰 증명서를 앨리스로부터 받지 못함. 4단계에서 yes라고 결정하면 클라이언트는 1단계에서 취득한 임시 증명서를 실제 토큰 증명서로 교환할 수 있음.
