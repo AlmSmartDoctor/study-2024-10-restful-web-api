@@ -193,7 +193,7 @@ CoRE 연결 형식에서 연결의 rt 속성은 반대 끝에 있는 리소스�
 
 ## 4. RDF 스키마
 
-> RDF를 확장하여, RDF 데이터를 구조화하고 그 의미를 정의하는 데 사용되는 어휘 정의 언어
+> 기본 RDF 어휘의 확장
 
 https://www.w3.org/TR/rdf-schema/#ch_type
 
