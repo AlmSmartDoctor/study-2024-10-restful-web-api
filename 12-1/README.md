@@ -77,8 +77,6 @@
                              maze:west <http://example.com/cells/L> .
 ```
 
-https://www.oss.kr/oss_case/show/a0468850-9800-484f-a8f7-155b1978bc13
-
 RDF는 URL을 URI로 취급
 
 - URI: 자원 식별자
@@ -143,7 +141,58 @@ CoRE 연결 형식에서 연결의 rt 속성은 반대 끝에 있는 리소스�
 
 ## 4. RDF 스키마
 
-> 리소스 유형을 설명하기 위한 RDF 문서
+> RDF를 확장하여, RDF 데이터를 구조화하고 그 의미를 정의하는 데 사용되는 어휘 정의 언어urn:isbn:9781449358063> a schema:Book ;
+schema:name "RESTful Web APIs" ;
+schema:inLanguage "en" ;
+schema:isbn "9781449358063" ;
+schema:author _:mike ;
+schema:author _:leonard .
+
+_:mike a schema:Person ;
+schema:name "Mike Amundsen" .
+
+_:leonard a schema:Person ;
+schema:name "Leonard Richardson" .
+```
+
+## 3. 리소스 유형
+
+시멘틱 웹의 가장 유용한 아이디어 중 하나는 리소스가 하나 또는 하나 이상의 리소스 유형으로 분류될 수 있다는 것이다.
+
+RDF의 type 속성은 유형을 리소스에 할당한다.
+
+```ttl
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<http://example.com/~omjennyg> <rdf:type> <http://schema.org/Person> ;
+<http://schema.org/birthDate> "1987-08-25" .
+```
+
+```ttl
+<http://example.com/~omjennyg> a <http://schema.org/Person> ;
+<http://schema.org/birthDate> "1987-08-25" .
+```
+
+XLink 형식에서 연결은 role 속성을 가질 수 있는데, 이는 연결의 반대 끝에 있는 리소스의 유형을 알려준다.
+
+```xml
+<a xlink:href="http://example.com/~omjennyg"
+   xlink:arcrole="http://alps.io/iana/relations#author"
+   xlink:role="http://schema.org/Person">
+```
+
+CoRE 연결 형식에서 연결의 rt 속성은 반대 끝에 있는 리소스의 유형을 전달한다.
+
+```CoRE
+<http://example.com/~omjennyg>;rel="author";rt="http://schema.org/Person"
+```
+
+'리소스 유형'의 개념은 RDF 으로부터.
+
+## 4. RDF 스키마
+
+> RDF를 확장하여, RDF 데이터를 구조화하고 그 의미를 정의하는 데 사용되는 어휘 정의 언어
+
+https://www.w3.org/TR/rdf-schema/#ch_type
 
 ```rdf
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -155,8 +204,6 @@ rdfs:subClassOf <http://schema.org/Thing> .
 ```
 
 RDF 스키마 프로파일은 더 많은 API 애플리케이션 의미 체계를 기계가 이해할 수 있는 형태로 넣는다.
-
-https://www.w3.org/TR/rdf-schema/#ch_type
 
 ## 5. 연결된 데이터 운동
 
