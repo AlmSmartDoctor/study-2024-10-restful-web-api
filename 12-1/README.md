@@ -232,8 +232,7 @@ JSON-LD는 하이퍼미디어 제공 가능
 
 OWL(Web Ontology Language)
 
-RDF: 기본적인 데이터 관계 표현
-OWL: RDF 데이터 모델 위에서 구축 & 복잡한 논리적 구조와 제약 조건 표현 가능
+OWL은 RDFS의 확장
 
 ```xml
 <rdf:Description rdf:about="#hasParent">
