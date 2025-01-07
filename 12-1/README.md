@@ -199,18 +199,7 @@ https://groups.google.com/g/json-ld/c/ZdBWem5OBW8
 >
 > RDF Turtle 의 다른 축약어나 기능에 대해 설명해주세요
 
-다국어 지원
-
-```ttl
-ex:John ex:hasName "John"@en .
-ex:John ex:hasName "Jean"@fr .
-```
-
-데이터 타입 지원
-
-```ttl
-ex:John ex:hasAge "25"^^xsd:int .
-```
+https://www.w3.org/TR/turtle/#object-lists
 
 ### Q4.
 
