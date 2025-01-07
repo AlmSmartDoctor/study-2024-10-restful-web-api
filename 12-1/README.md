@@ -219,10 +219,7 @@ ex:John ex:hasAge "25"^^xsd:int .
 > (p.324) "설명 전략 대신에 표현 전략을 사용하기로 결정하면 아마도 RDF/XML이나 RDF/Turtle보다 하이퍼미디어 제어에 더 나은 다른 데이터 형식을 사용하길 원할 것이다."
 > 여기서 언급한 '더 나은 데이터 형식'의 예시와 더 나은 이유를 알려주시면 감사하겠습니다!
 
-JSON-LD
-
-RDF/XML 과 RDF/Turtle 은 URL처럼 보이는 문자열도 URI로 취급
-JSON-LD는 하이퍼미디어 제공 가능
+Collection+JSON
 
 ### Q5.
 
