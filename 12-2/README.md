@@ -118,34 +118,6 @@ urn:isbn:9781449358063
 http://example.com/copyright?resource=urn:isbn:9781449358063
 ---
 
-웹핑거
-
-> 웹핑거 프로토콜은 사용자 계정에 대한 정보를 찾아보는 데 필요한 JRD 문서 사용을 위한 이름
-계정 식별: `acct:jenny@example.com`
-계정 리소스 표현: `http://openid.example.com/users/omjennyg`
-
----
-
-웹핑거 요청
-
-GET /.well-known/webfinger?resource=acct%3Ajenny%40example.com </br>
-HTTP/1.1
-
-HTTP/1.1 200 OK </br>
-Content-Type: application/jrd+json
-
-```json
-{
-  "subject": "acct:jenny@example.com",
-  "properties": {
-    "http://schema.org/name": "Jenny Gallegos",
-    "http://schema.org/email": "jenny@example.com"
-  }
-}
-```
-
----
-
 ## 4. 온톨로지 동물원
 
 ### schema.org RDF
