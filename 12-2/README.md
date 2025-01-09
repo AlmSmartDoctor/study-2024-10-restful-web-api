@@ -155,6 +155,8 @@ Content-Type: application/jrd+json
 
 http://schema.org/docs/schema_org_rdfa.html
 
+![image](https://github.com/user-attachments/assets/fb271738-6d27-4802-90ea-23b95994014d)
+
 ### FOAF
 
 http://xmlns.com/foaf/spec/index.rdf
