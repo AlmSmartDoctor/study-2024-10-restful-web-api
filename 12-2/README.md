@@ -150,14 +150,22 @@ Content-Type: application/jrd+json
 
 ### schema.org RDF
 
+사람들이 온라인에서 찾고자 하는 것들
+
 http://schema.org/docs/schema_org_rdfa.html
 
 ![image](https://github.com/user-attachments/assets/fb271738-6d27-4802-90ea-23b95994014d)
 ### FOAF
 
+사람과 조직
+
 http://xmlns.com/foaf/spec/index.rdf
 
 ### vocab.org
+
+다양한 의미의 RDF 스키마 문서를 제공하는 곳
+
+리소스를 설명하는 RDF 문서 게시 요청 가능 
 
 http://vocab.org
 
