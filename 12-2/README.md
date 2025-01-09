@@ -61,6 +61,8 @@ JSON-LD는 애플리케이션 의미 체계를 자세하게 표현할 수 있지
 히드라는 JSON-LD 콘텍스트로 JSON-LD에 많은 프로토콜 의미 체계를 추가한 JSON-LD의 파생 </br>
 히드라를 추가하면 거의 모든 HTTP 요청을 지정할 수 있다.
 
+http://purl.org/hydra/core/context.jsonld
+
 ## 3. XRD 종류들
 
 XRD
