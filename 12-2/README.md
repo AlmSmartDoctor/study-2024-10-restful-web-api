@@ -115,6 +115,9 @@ XRD 연결은 href 대신 template 속성을 가질 수 있음
 <Link rel="copyright" template="http://example.com/copyright?resource={uri}" />
 ```
 
+urn:isbn:9781449358063
+
+http://example.com/copyright?resource=urn:isbn:9781449358063
 ---
 
 웹핑거
