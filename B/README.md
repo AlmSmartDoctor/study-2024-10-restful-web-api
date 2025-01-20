@@ -10,40 +10,48 @@
 
 HTTP 헤더: HTTP 요청이나 응답 프로토콜 의미 체계를 설명하는 메타데이터
 
-- Accept: MIME 타입으로 표현되는, 클라이언트가 이해 가능한 컨텐츠 타입이 무엇인지를 알려줌
+- Accept(요청): MIME 타입으로 표현되는, 클라이언트가 이해 가능한 컨텐츠 타입이 무엇인지를 알려줌
 
-- Content-Encoding: 개체 본문에 어떤 추가적인 컨텐츠 인코딩/압축이 적용될지를 나타냅니다.
+- Accept-Encoding(요청): 클라이언트가 이해 가능한 컨텐츠 인코딩이 무엇인지를 알려줌
 
-- Content-Type: 클라이언트에게 반환된 컨텐츠의 컨텐츠 유형이 실제로 무엇인지를 알려줌
+- Content-Type(응답): 클라이언트에게 반환된 컨텐츠의 컨텐츠 유형이 실제로 무엇인지를 알려줌
+
+- Content-Encoding(응답): 개체 본문에 어떤 추가적인 컨텐츠 인코딩/압축이 적용될지를 나타냄
+
+    ![alt text](images/image.png)
 
     1. 서버가 Content-Type 결정 후 Content-Encoding 형식으로 압축
     2. 클라이언트가 Content-Encoding 형식으로 압축 해제 후 Content-Type으로 해석
 
-- Set-Cookie: 서버에서 사용자 에이전트로 쿠키를 보내는데 사용
-
-- Cookie: Set-Cookie 헤더와 함께 서버에 의해 이전에 전송되어 저장된 HTTP cookies를 포함
-
 - Cache-Control: 요청과 응답 내의 캐싱 메커니즘을 위한 디렉티브를 정하기 위해 사용
 
-- Last-Modified: 원본 서버가 리소스가 마지막으로 수정되었다고 생각하는 날짜와 시간을 포함
+- Last-Modified(응답), If-Modified-Since(요청): 원본 서버가 리소스가 마지막으로 수정되었다고 생각하는 날짜와 시간을 포함
 
-- Etag: 특정 버전의 리소스를 식별하는 식별자
+- Etag(응답), If-None-Match(요청): 특정 버전의 리소스를 식별하는 식별자
 
     https://velog.io/@leemember/HTTP-%ED%97%A4%EB%8D%94-%EC%BA%90%EC%8B%9C%EC%99%80-%EC%A1%B0%EA%B1%B4%EB%B6%80-%EC%9A%94%EC%B2%AD-%EC%BA%90%EC%8B%9C-%EA%B8%B0%EB%B3%B8-%EB%8F%99%EC%9E%91
 
-- Location: 리다이렉션의 대상이나 새로 만들어진 리소스의 URL (3xx (redirection) 또는 201 (created) 응답 상태와 함께 제공)
+- Location: 리다이렉션의 대상이나 새로 만들어진 리소스의 URL
+    - 3xx (redirection)과 함께 클라이언트가 새로운 URI로 요청을 보내도록 지시
+    - 또는 201 (created)과 함께 생성된 리소스의 URI를 알림
 
 - Content-Location: 반환된 데이터에 대한 대체 위치
+    - [콘텐츠 협상의 결과](https://developer.mozilla.org/ko/docs/Web/HTTP/Content_negotiation)
 
-- Access-Control-Allow-Origin: 응답이 주어진 origin으로부터의 요청 코드와 공유될 수 있는지를 나타냄 (`Access-Control-Allow-Origin: <origin>`)
+- Access-Control-Allow-Origin: 응답이 주어진 origin으로부터의 요청 코드와 공유될 수 있는지를 나타냄 ([CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS))\
+    format) `Access-Control-Allow-Origin: <origin>`
 
-- Content-Security-Policy (CSP): 교차 사이트 스크립팅(XSS)과 데이터 주입 공격을 비롯한 특정 유형의 공격을 탐지하고 완화하는 데 도움이 되는 추가 보안 계층
+- [Content-Security-Policy](https://developer.mozilla.org/ko/docs/Web/HTTP/CSP) (CSP): 교차 사이트 스크립팅(XSS)과 데이터 주입 공격을 비롯한 특정 유형의 공격을 탐지하고 완화하는 데 도움이 되는 추가 보안 계층
 
 - Strict-Transport-Security (HSTS): 사이트가 HTTPS를 통해서만 접근되어야 하며 향후 HTTP를 사용하여 사이트에 접근하려는 모든 시도는 자동으로 HTTPS로 변환되어야 함을 브라우저에 알림
 
 - Authorization: 서버의 사용자 에이전트임을 증명하는 자격을 포함
 
 - User-Agent: 서버와 네트워크 피어가 요청하는 애플리케이션, 운영체제, 제조업체, 사용자 에이전트 요청 버전을 식별하는 독특한 문자열
+
+- Set-Cookie: 서버에서 사용자 에이전트로 쿠키를 보내는데 사용
+
+- Cookie: Set-Cookie 헤더와 함께 서버에 의해 이전에 전송되어 저장된 HTTP cookies를 포함
 
 ## 커스텀 HTTP 헤더
 
@@ -99,3 +107,13 @@ https://github.com/WPPlugins/eht-visits/blob/6188623ffa6f056eec7c6d2808bfe757cc9
 ### A3. 
 
 https://www.cloudflare.com/ko-kr/learning/privacy/what-are-cookies/
+
+
+### Q4.
+> 박지환 \
+> 아마존이 S3 API를 위해 정의한 X-amz-acl과 X-amz-date 헤더들은 어떤 특징을 가지고 있는지, 그리고 다른 헤더들과 비교했을 때 결정적인 차이점은 무엇인지 궁금합니다.
+
+
+### A3. 
+
+[x-amz-acl](https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/example-bucket-policies-condition-keys.html): 버킷 소유자에게 특정 권한을 부여하는 데 사용
