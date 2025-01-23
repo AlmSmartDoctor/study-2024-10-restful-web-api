@@ -1,4 +1,4 @@
-**# 부록 C. API 설계자를 위한 필딩 논문 가이드**
+# 부록 C. API 설계자를 위한 필딩 논문 가이드
 
 > 발표일 `25.01.22`
 
@@ -6,13 +6,13 @@
 
 > 발표자 `박지환`
 
-**## 목차**
+## 목차
 
 1. 웹의 구조적 특성
 2. REST 구조적 제약
 3. 질문
 
-**## 1. 웹의 구조적 특성 (웹이 성공한 이유)**
+## 1. 웹의 구조적 특성 (웹이 성공한 이유)
 
 1. 낮은 진입 장벽
 
@@ -37,7 +37,7 @@
    - "독립적인 배포": 장기적인 관계가 없으므로 시스템의 각 부분이 다른 속도로 변화 O.
      <img src="./images/internet.png" width="300">
 
-**## 2. REST 구조적 제약**
+## 2. REST 구조적 제약
 
 1. 클라이언트 - 서버
 
@@ -80,9 +80,9 @@
    - 단점: 서버에 종속하는 구조, 보안 이슈, 디버깅 어려움
      <img src="./images/code_on_demand.png" width="300">
 
-**## 3. 질문**
+## 3. 질문
 
-**### Q1.**
+### Q1.
 
 > 곽재영:
 
@@ -90,7 +90,7 @@
 
 > 각각의 장단점 및 실제 적용 케이스를 소개해주세요.
 
-**### A1.**
+### A1.
 
 - 버저닝 장단점 참고자료: https://www.xmatters.com/blog/blog-four-rest-api-versioning-strategies
 - 실제 적용 케이스 참고자료: https://blog.worldline.tech/2023/08/08/rest-api-versioning-for-dummies.html
@@ -117,7 +117,7 @@
 
 <hr>
 
-**### Q2.**
+### Q2.
 
 > 한태혁:
 
@@ -125,7 +125,7 @@
 
 > HTTP 요청을 선정하는 기준, 지속시간 등 캐싱에 대한 best practice가 궁금합니다.
 
-**### A2.**
+### A2.
 
 - TTL 참고자료: https://www.imperva.com/learn/performance/time-to-live-ttl/
 - 캐싱 전략 참고자료: https://hazelcast.com/foundations/caching/caching-strategies/
@@ -139,13 +139,13 @@
 
 <hr>
 
-**### Q3.**
+### Q3.
 
 > 박근영:
 
 > TRACE 메서드는 주로 어떤 동작을 하나요?
 
-**### A3.**
+### A3.
 
 - TRACE 예시 참고자료: https://apidog.com/blog/http-trace-method/
 
@@ -156,13 +156,13 @@
 
 <hr>
 
-**### Q4.**
+### Q4.
 
 > 권희근:
 
 > 웹 API 설계에서 확장성과 인터넷-규모를 택하고 낮은 진입장벽을 포기하는 것이 세부적으로 어떤 비즈니스적/기술적 트레이드오프를 만들어내는지 궁금합니다.
 
-**### A4.**
+### A4.
 
 "이 답변은 발표자의 개인적인 의견과 ChatGPT의 답변을 종합하여 작성되었습니다"
 
@@ -178,20 +178,20 @@
 
 <hr>
 
-**### Q5.**
+### Q5.
 
 > 최준영:
 
 > 프록시와 게이트웨이의 역할에 대해 조금 더 설명해주세요
 
-**### A5.**
+### A5.
 
 - Proxy & Gateway 참고자료 1: https://coding-start.tistory.com/342
 - Proxy & Gateway 참고자료 2: https://velog.io/@hyun-jii/%ED%94%84%EB%A1%9D%EC%8B%9CProxy-vs-%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4Gateway
 
 <hr>
 
-**### Q6.**
+### Q6.
 
 > 서형석:
 
@@ -201,7 +201,7 @@
 
 > 그 방식이 존재한다면 Restful할까요? Restful하지 않다면 어떤 제약조건에서 충돌하는 점이 있을까요?
 
-**### A6.**
+### A6.
 
 - 클라이언트가 리소스의 의미를 동적으로 이해할 필요가 있는 경우, 서버는 리소스에 대한 응답 시 `명시적 메타데이터`를 함께 제공해야 합니다.
 - 예를 들어, `HATEOAS`를 활용하여 서버가 아래와 같은 형태로 응답을 제공한다면 클라이언트는 리소스에 대한 행동 가능성을 명확히 이해할 수 있습니다:
@@ -227,7 +227,7 @@
 
 <hr>
 
-**### Q7.**
+### Q7.
 
 > 임해찬:
 
@@ -235,7 +235,7 @@
 
 > (ex. 스트림을 통한 다수 요청의 병렬적 처리 등)
 
-**### A7.**
+### A7.
 
 - HTTP 1.1 vs HTTP 2.0 참고자료: https://www.cloudflare.com/ko-kr/learning/performance/http2-vs-http1.1/
 
