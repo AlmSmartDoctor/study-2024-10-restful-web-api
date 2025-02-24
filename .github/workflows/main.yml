@@ -1,30 +1,30 @@
-name: Record Commit History
+# name: Record Commit History
 
-on:
-  schedule:
-    - cron: '59 23 * * 0' # Runs at 23:59 every Sunday
-  workflow_dispatch: # Allows manual triggering
+# on:
+#   schedule:
+#     - cron: '59 23 * * 0' # Runs at 23:59 every Sunday
+#   workflow_dispatch: # Allows manual triggering
 
 
-jobs:
-  record_commits:
-    runs-on: ubuntu-latest
+# jobs:
+#   record_commits:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0 # Fetches the full history
+#     steps:
+#     - name: Checkout Repository
+#       uses: actions/checkout@v2
+#       with:
+#         fetch-depth: 0 # Fetches the full history
 
-    - name: Record Commit History
-      run: |
-        mkdir -p logs
-        git log --pretty=format:"%h - %an, %ar : %s" > logs/commit_history_$(date +'%Y-%m-%d').txt
+#     - name: Record Commit History
+#       run: |
+#         mkdir -p logs
+#         git log --pretty=format:"%h - %an, %ar : %s" > logs/commit_history_$(date +'%Y-%m-%d').txt
 
-    - name: Push Commit Log
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git add logs/commit_history_*.txt
-        git commit -m "Update commit history log for $(date +'%Y-%m-%d')"
-        git push
+#     - name: Push Commit Log
+#       run: |
+#         git config --local user.name "github-actions[bot]"
+#         git config --local user.email "github-actions[bot]@users.noreply.github.com"
+#         git add logs/commit_history_*.txt
+#         git commit -m "Update commit history log for $(date +'%Y-%m-%d')"
+#         git push
